@@ -3,4 +3,4 @@
         <div> <c:AccountMap/></div>
         <div><c:AccountList/></div>
     </div>
-</aura:component>	
+</aura:component>

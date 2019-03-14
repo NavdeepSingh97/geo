@@ -1,9 +1,10 @@
 ({
-    doInit : function(component, event, helper) {
-  var action = component.get("c.getAll");
-  action.setCallback(this,function(response){
- component.set("v.accounts",response.getReturnValue());
-  });
-  $A.enqueueAction(action);
-    }
+  doInit : function(component, event) {
+      var action = component.get("c.findAll");
+      action.setCallback(this, function(a) {
+          console.log(JSON.stringify(a.getReturnValue()) );
+        component.set("v.accounts", a.getReturnValue()); 
+      });
+      $A.enqueueAction(action);
+  }
 })
